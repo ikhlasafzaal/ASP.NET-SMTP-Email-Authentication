@@ -1,0 +1,13 @@
+create database pro;
+
+use pro
+
+create table register(
+rid int primary key identity(1,1),
+rname varchar(255) unique,
+runame varchar(255),
+remail varchar(255),
+rpass varchar(255)
+);
+
+select * from register

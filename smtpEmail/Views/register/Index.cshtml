@@ -1,0 +1,55 @@
+﻿@model IEnumerable<smtpEmail.Models.Register>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Rid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Runame)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Remail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rpass)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Runame)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Remail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rpass)
+            </td>
+           
+        </tr>
+}
+    </tbody>
+</table>

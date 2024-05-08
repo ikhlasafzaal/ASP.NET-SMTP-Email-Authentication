@@ -1,0 +1,28 @@
+﻿@model smtpEmail.Models.Register;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+       <h1>REGISTERTION FORM</h1>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Name</label>
+        <input type="text" asp-for="Rname" class="form-control" name="name">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">UserName</label>
+        <input type="text" asp-for="Runame" class="form-control" name="uname">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Email</label>
+        <input type="email" asp-for="Remail" class="form-control" name="email">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Password</label>
+        <input type="password" asp-for="Rpass" class="form-control" name="pass">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>

@@ -1,0 +1,33 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model smtpEmail.Models.Register;
+@{
+    ViewData["Title"] = "Login Page";
+}
+
+@{
+    if (ViewBag.message != null)
+    {
+        <h2 style="color:red">@ViewBag.error</h2>
+    }
+}
+
+<form asp-controller="LoginController" asp-action="Login" method="post">
+    <div class="mb-3">
+        <h1>LOGIN FORM</h1>
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">UserName</label>
+        <input type="text" asp-for="Runame" class="form-control" name="uname">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Password</label>
+        <input type="password" asp-for="Rpass" class="form-control" name="pass">
+    </div>
+
+    <button type="submit" class="btn btn-primary">LOGIN</button>
+</form>
+
